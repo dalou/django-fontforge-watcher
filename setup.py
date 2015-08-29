@@ -12,7 +12,7 @@ f.close()
 
 setup(
     name='django-fontforge-watcher',
-    version="1.0.1",
+    version="1.0.3",
     description='Django fontforge watchers & auto compilers',
     long_description=readme,
     author='Autrusseau Damien',
@@ -22,7 +22,7 @@ setup(
     zip_safe=False,
     license='MIT',
     classifiers=[
-        'Development Status :: 1.0',
+        'Development Status :: 1.0.3',
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
