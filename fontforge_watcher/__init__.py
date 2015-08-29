@@ -37,7 +37,7 @@ class Watcher(object):
     handler = None
     command = None
     blocked = False
-    stout_prefix = 'cargo-fontforge'
+    stout_prefix = 'fontforge'
     configs = []
 
     def __init__(self, command=None, *args, **kwargs):
@@ -74,10 +74,10 @@ class Watcher(object):
         self.configs = []
         settings = conf.settings
 
-        if not hasattr(settings, 'CARGO_FONTFORGE') and 'watcher' in settings.CARGO_FONTFORGE:
-            self.print_error('Improprely config for cargo stylus watcher : missing settings.CARGO_FONTFORGE["watcher"]')
+        if not hasattr(settings, 'FONTFORGE_WATCHER') and 'watcher' in settings.FONTFORGE_WATCHER:
+            self.print_error('settings.FONTFORGE_WATCHER is missing ')
         else:
-            configs = settings.CARGO_FONTFORGE['watcher']
+            configs = settings.CARGO_FONTFORGE
 
             for config in configs:
 
@@ -117,7 +117,7 @@ class Watcher(object):
                     if source and folder_output:
                         self.configs.append([source, folder_output, css_output, classname, content])
                 except Exception, e:
-                    self.print_error('Invalid config for cargo stylus watcher "%s"' % str(e))
+                    self.print_error('Invalid config for fontforge watcher "%s"' % str(e))
 
     def generate_font(self,  compress=True):
 
@@ -203,7 +203,7 @@ class Watcher(object):
         return app_paths
 
     def sigterm(self, signum, frame):
-        print 'Cargo watchers : SIGTERM'
+        #print 'Cargo watchers : SIGTERM'
         self.observer.stop()
         self.observer.join()
         exit(0)

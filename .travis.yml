@@ -1,16 +1,17 @@
 language: python
 before_install:
-    - sudo apt-get update
-    - sudo apt-get install python-fontforge
+  - sudo apt-get update
+  - sudo apt-get install python
+  - sudo apt-get install python-fontforge
 install:
-    - pip install -q -e .
+  - pip install -q -e .
 
 python:
-    - '2.7'
+  - '2.7'
 
 script:
-    - python runtests.py
-    #nosetests
+  - python runtests.py
+  #nosetests
 
 deploy:
   provider: pypi
