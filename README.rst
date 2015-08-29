@@ -1,4 +1,4 @@
-# django-fontforge-watcher
+django-stylus-watcher
 ======================
 
 This add a command .
@@ -6,9 +6,9 @@ This add a command .
 Usage
 =====
 
-Put ``'stylus_fontforge'`` into ``INSTALLED_APPS``.
+Put ``'stylus_watcher'`` into ``INSTALLED_APPS``.
 
-Set settings ``FONTFORGE_WATCHER = [
+Set settings ``STYLUS_WATCHER = [
     ('relative/path/to/main/stylus/file.styl', 'relative/path/to/compiled/file.css'), # A compilation rules
     ('relative/path/to/main/stylus/file.styl', 'relative/path/to/compiled/file.css'), # Antoher compilation rules
     ...etc
@@ -16,9 +16,8 @@ Set settings ``FONTFORGE_WATCHER = [
 
 The watcher listen changes in every installed apps ``styl`` folder
 
-Then run ``python manage.py stylus_fontforge``
+Then run ``python manage.py stylus_watcher``
 
 
 
 
-# django-fontforge-watcher
