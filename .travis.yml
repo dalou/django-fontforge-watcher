@@ -1,24 +1,19 @@
 language: python
 before_install:
-  - sudo apt-get update
-  - sudo apt-get install python
-  - sudo apt-get install python-fontforge
+- sudo apt-get update
+- sudo apt-get install python
+- sudo apt-get install python-fontforge
 install:
-  - pip install -q -e .
-
+- pip install -q -e .
 python:
-  - '2.7'
-
+- '2.7'
 script:
-  - python runtests.py
-  #nosetests
-
+- python runtests.py
 deploy:
   provider: pypi
   user: dalou
   password:
-    secure: iO8xcY0LTFOtPOHt7McujR0GQzTjfaGrxa2EeV9v1BmvfAm0DNfW6Itbu59pnVbVhPfPUnPKycMn6pNBiUL0pm3Ergfaz4zIMFHLgGMQ1BiIdZUOCFtI/gF12nA9viM/lQEfxWj72RKTUBodB/QtGjMFnhMbC2Vs4Ji7W0HNyZslDeQ/PuhGfoSIIRxzDSNrK+07pLB0zmC2yS/GLyxPLlF6ifflHhSexpuyPITFNW9DZV8BML+aviuqSaAKQe1dURXQSy8KEnQr96gGuPHYyxxS1Y8JZ/+cDwfNAg2b6DD8oY58wzN6ZeynjYP4PwP9j6La/AeWSzSlv8mbkS7yaYYJABUJwTi2Ay/OvKdCgahdytpzB4SSDWKfydOQNRTAdMphSnlT761ZFgHa9HJKt6ayG9bLg6ef6btMWX/1gJn3dO+IpNgnegNOCqqhnsb3ay0CiUEJ4filwgiSW9VQWHgzKixnjzmAdZLlpCQMFPkCWR0J1l5ojgSOK1cYauemT3i9R+eZlEkLNXui1xiFZFL6/y1KTsWyrXs4ybdtOX2lHal5qW+/aRHwgMSMLT8I7rNeBB/+Ca0i5F/IHdB1l/q/QOrIxOkjUr8eMwQ2qwrsGrDAjwF6IEuqd4M3dbmI6CnuktLPx+HOF1HniLwvnm+pJnJeHXeFm/9zzVGuxp4=
-
+    secure: Y8xrhXXS2qkie1iHyk3fcR4gloPXq4rIBO+2dN07pbD66SOk9wBSj/XopBBR/NZpYuLDoyobKTYiuSMTAxtEed6gMepCbuHvS1ukxo/DN9231BagXk9BHmjL/bKZGrfAMJzcT7rhc/F9iWwuzj1Tu9/Kd0KRHNBnL1jfKT7oTiQS9U6QkH+qjKS3AgZB16BjCLjAtMDspCny0k7+/K+KCSAmpSqY2lUX+mISCtTgsHh/fz6KtAQNNS8Yd5MFMRxUmm34bJtuO1HxHjh7Z19IC0zOJpeH3k3LLX/gMsdEe7Tx5AcmxWJaQkZG3nEtKDDbuaOcMFNUhLVHa3u5dlj5s1psUVL6Nm1JAph7wMtJR1kTxh1WWdfNdY1yEBD9PluhVdNE0DgCS51Bq/nLIyhRGiXwW/mJCVmFhHBQ6e/XccosQySWebC68yC46A9fL0Gy7sfn/SZYI7pSDBtIw5VdFyG35liAb/tQIE3eD2RNYo+Ra6b379DHCduccFIznBWORzKGP1pwga/3bzrRWoyBRAa3jjyD/GeP9Sn4lLjHDFCBOGUeiQQz0qZ/wNz/0cLQ2yMl8JuD3gvYsRE+ovI6s8y9U+Uf3nGDTa5r8XjWwMbyz4+fjK+0C8Pa+OTDSKLKdz8SSx/UPYFkpauIzg7HgzGv5d8kLrhG64xlTWI3Mzw=
   on:
     branch: master
     tags: true
