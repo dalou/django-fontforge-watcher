@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.utils.module_loading import import_module
 from django.core.management.base import BaseCommand
-from fontforge_watcher import FontforgeWatcher
+from fontforge_watcher import Watcher
 
 class Command(BaseCommand):
     args = ''
@@ -9,5 +9,5 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
 
-        watcher = FontforgeWatcher(command=self)
+        watcher = Watcher(command=self)
         watcher.watch()
