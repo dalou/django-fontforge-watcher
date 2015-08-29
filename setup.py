@@ -40,7 +40,7 @@ standard_exclude_directories = ('.*', 'CVS', '_darcs', './build',
 
 setup(
     name='django-fontforge-watcher',
-    version=find_version("fontforge_watcher", "__init__.py"),
+    version=find_version(),
     description='Django fontforge watchers and auto compilers',
     long_description=read('README.rst'),
     author='Autrusseau Damien',
