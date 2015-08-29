@@ -77,7 +77,7 @@ class Watcher(object):
         if not hasattr(settings, 'FONTFORGE_WATCHER') and 'watcher' in settings.FONTFORGE_WATCHER:
             self.print_error('settings.FONTFORGE_WATCHER is missing ')
         else:
-            configs = settings.CARGO_FONTFORGE
+            configs = settings.FONTFORGE_WATCHER
 
             for config in configs:
 
@@ -203,7 +203,6 @@ class Watcher(object):
         return app_paths
 
     def sigterm(self, signum, frame):
-        #print 'Cargo watchers : SIGTERM'
         self.observer.stop()
         self.observer.join()
         exit(0)
