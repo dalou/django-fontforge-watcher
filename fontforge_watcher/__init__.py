@@ -1,3 +1,6 @@
+# following PEP 386
+__version__ = "1.0.4"
+
 import os
 import sys
 import time
